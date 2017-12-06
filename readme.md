@@ -1,6 +1,8 @@
 # Un paint en canvas !
 
-jimpaint est un mini-paint qui utilise à gogo la balise `<canvas>` !
+jimpaint est un mini-paint qui utilise à gogo la balise `<canvas>` !  
+[Testez-le ici](https://jimetevenard.github.io/jspaint/)
+
 
 ## Soyez créatifs
 
@@ -9,7 +11,7 @@ J'ai codé trois outils,
 - un outil **ligne** pour trcer de beaux traits droits
 - un outil **pinceau** pour les artistes
 - un outil **ellipse** tout en rondeur. *Astuce :* Maintenez la touche majuscule pour faire un cercle parfait.
-- un outil ** rectangle** pour les plus rigoureux. *Astuce :* Maintenez la touche majuscule pour faire un carré parfait.
+- un outil **rectangle** pour les plus rigoureux. *Astuce :* Maintenez la touche majuscule pour faire un carré parfait.
 
 ## Coder de nouveaux outils
 
