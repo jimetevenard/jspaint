@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>JimPaint</title>
+        <link rel="stylesheet" href="core_css/jimpaint.css" />
+        
+        <!-- fontawesome (icons) -->
+        <script src="https://use.fontawesome.com/9d42c4f12f.js"></script>
+        
+        <!-- core scripts -->
+        <script src="core_js/jquery.js" ></script>
+        <script src="core_js/jim-paint.js" ></script>
+        
+        <!-- tools scripts -->
+        <script src="tools/brush.js" ></script>
+        <script src="tools/line.js" ></script>
+        <script src="tools/elllipse.js" ></script>
+        <script src="tools/rect.js" ></script>
+        
+    </head>
+    <body>
+        
+        <canvas id="main-canvas" width="500" height="400" >Votre navigateur ne prend pas en charge le Canvas</canvas>
+        <canvas id="tool-canvas" width="500" height="400" tabindex="1">Votre navigateur ne prend pas en charge le Canvas</canvas>
+        
+        <div id="toolbox">
+            <ul class="tools">
+                <!-- 
+                    <li data-tool="line">Ligne</li>
+                    ...
+                -->
+
+            </ul>
+            <hr>
+            <div class="params">
+                <label>Trait :</label><br>
+                <input type="color" data-param="strokeColor"  value="#000077" /><br>
+                
+                <label>Epaiss :</label><br>
+                <input data-param="lineWidth" class="classic" value="5" />px<br>
+                
+                <label>Remplissage :</label><br>
+                <input type="color" data-param="fillColor"  value="#FFFF00" /><br>       
+                
+                <label>Pinceau :</label><br>
+                <input data-param="brushWidth" class="classic" value="10" />px<br>
+                
+                
+            </div>
+        </div>
+    </body>
+</html>
+
