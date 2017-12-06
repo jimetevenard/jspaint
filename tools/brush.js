@@ -11,6 +11,8 @@ var brushTool = {
     },
     mouseUpHandler: function () {
         brushTool.workingData.isMouseDown = false;
+        
+        jimpaint.commitAction();
     },
     mouseMoveHandler: function (event) {
         if (brushTool.workingData.isMouseDown) {
@@ -24,6 +26,7 @@ var brushTool = {
             c.arc(x, y, jimpaint.currentParams.brushWidth, 0, 2 * Math.PI);
 
             jimpaint.fill(c); // fill avec les parametre utilisateur
+            
         }
     },
     workingData: {

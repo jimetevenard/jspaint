@@ -19,9 +19,10 @@ var rectTool = {
         } else {
 
             // go
-            // on efface le working
+            // on efface le workingLayer
             var wc = jimpaint.layers.workingLayer.canvas.getContext('2d');
             wc.clearRect(0, 0, wc.canvas.width, wc.canvas.height);
+            
             
             var rc = jimpaint.layers.currentLayer.canvas.getContext('2d');
             rc.beginPath();
@@ -40,6 +41,8 @@ var rectTool = {
             jimpaint.fill(rc);
             
             rectTool.workingData.firstPointDone = false;
+            
+            jimpaint.commitAction();
         }
     },
     mouseMoveHandler: function (event) {

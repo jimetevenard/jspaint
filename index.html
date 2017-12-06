@@ -11,6 +11,7 @@
         
         <!-- core scripts -->
         <script src="core_js/jquery.js" ></script>
+        <script src="core_js/jquery-ui.js" ></script>
         <script src="core_js/jim-paint.js" ></script>
         
         <!-- tools scripts -->
@@ -21,11 +22,13 @@
         
     </head>
     <body>
-        
-        <canvas id="main-canvas" width="500" height="400" >Votre navigateur ne prend pas en charge le Canvas</canvas>
+        <div class="layers-canvas">
+            <canvas id="main-canvas" width="500" height="400" >Votre navigateur ne prend pas en charge le Canvas</canvas>
+        </div>
         <canvas id="tool-canvas" width="500" height="400" tabindex="1">Votre navigateur ne prend pas en charge le Canvas</canvas>
         
-        <div id="toolbox">
+        <div id="toolbox" class="pane drag-me">
+            <div class="handle hor"></div>
             <ul class="tools">
                 <!-- 
                     <li data-tool="line">Ligne</li>
@@ -48,6 +51,15 @@
                 <input data-param="brushWidth" class="classic" value="10" />px<br>
                 
                 
+            </div>
+        </div>
+        <div id="layers" class="pane drag-me">
+            <div class="handle hor"></div>
+            <div class="layers">
+                <div class="layer current" data-layer="1">
+                    <img src="" width="90" />
+                    <label>Calque 1</label>
+                </div>
             </div>
         </div>
     </body>

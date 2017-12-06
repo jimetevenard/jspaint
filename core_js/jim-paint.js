@@ -49,7 +49,8 @@ var jimpaint = {
             }
         }
 
-        //Toolbox Click***
+        // Controls ***
+        $('.drag-me').draggable({ handle: '.handle'});
 
         $('#toolbox .tools li').click(function () {
             $('#toolbox .tools li').removeClass('selected');
@@ -65,6 +66,8 @@ var jimpaint = {
             jimpaint.currentParams[$(this).data('param')] = $(this).val();
             jimpaint.canvas.toolCanvas.focus()
         });
+        
+        
 
 
 
@@ -109,6 +112,10 @@ var jimpaint = {
     fill: function (canvasContext) {
         canvasContext.fillStyle = this.currentParams.fillColor;
         canvasContext.fill();
+    },
+    commitAction: function(){
+        var layerThumb = jimpaint.layers.currentLayer.canvas.toDataURL('image/png');
+        $('#layers .layer.current img').attr('src',layerThumb);
     },
     currentTool: {},
     layers: {

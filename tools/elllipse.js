@@ -19,7 +19,7 @@ var ellipseTool = {
         } else {
 
             // go
-            // on efface le working
+            // on efface dabord le workingLayer
             var wc = jimpaint.layers.workingLayer.canvas.getContext('2d');
             wc.clearRect(0, 0, wc.canvas.width, wc.canvas.height);
             
@@ -41,6 +41,8 @@ var ellipseTool = {
             jimpaint.fill(rc);
             
             ellipseTool.workingData.firstPointDone = false;
+            
+            jimpaint.commitAction();
         }
     },
     mouseMoveHandler: function (event) {

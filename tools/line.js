@@ -17,8 +17,10 @@ var lineTool = {
             c.lineTo(event.pageX, event.pageY);
 
             jimpaint.stroke(c); // stroke avec les paramètres en cours
-
+            
             lineTool.workingData.firstPointDone = false;
+            
+            jimpaint.commitAction();
         } else {
             lineTool.workingData.firstPointDone = true;
             // mouseMoveHandler fera le reste...
